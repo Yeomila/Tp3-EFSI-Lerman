@@ -6,8 +6,7 @@ const consultaUsuario = () => {
 fetch(`https://dummyjson.com/products/search?q=${busquedaUsuario}`)
     .then(res => res.json())
     .then(res => {
-        console.log(res)
-        valores = document.getElementById("valores");
+
         const resultados = document.getElementById("gridResultados");
         resultados.innerHTML = null;
         res.products.forEach(actual => {
